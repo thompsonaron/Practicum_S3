@@ -10,6 +10,7 @@ public class EndOfRoundController : USceneController
     public bool playerWon = false;
     private string retryScene;
     private string nextScene;
+    // TODO add retry scene somehow and add next scene
 
     public void SetCurrentAndNextScene(string currentScene, string nextScene)
     {
@@ -24,6 +25,10 @@ public class EndOfRoundController : USceneController
         var retryButton = GameObject.Find("RetryButton").GetComponent<Button>();
         var winLoseText = GameObject.Find("WinLoseText").GetComponent<Text>();
 
+
+
+        //should guard
+        // TODO Set all proper controllers
         mainMenuButton.onClick.AddListener(() =>
         {
             AssetProvider.ReturnAllToPool();
@@ -59,5 +64,17 @@ public class EndOfRoundController : USceneController
             nextLevelButton.gameObject.SetActive(false);
             winLoseText.text = "Game Complete!";
         }
+    }
+
+    // TODO set as a global variable.. b uttons and winlosetext
+    public void EnableNextLvlButton() {  }
+    public void EnableRetryButton() { }
+
+    public override void SceneWillAppear()
+    {
+    }
+
+    public override void SceneWillDisappear()
+    {
     }
 }

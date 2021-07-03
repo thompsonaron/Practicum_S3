@@ -8,11 +8,14 @@ public class SettingsMenuController : USceneController
 {
     public SettingsMenuController() : base(SceneNames.SettingsMenuController) { }
 
+    private int value = 0;
+
     private bool enableMainMenuButton = false;
 
     public override void SceneDidLoad()
     {
         HandleButtons();
+        SetupLabels();
     }
 
     public override void SceneWillAppear()
@@ -25,8 +28,15 @@ public class SettingsMenuController : USceneController
         enableMainMenuButton = true;
     }
 
+    private void SetupLabels()
+    {
+
+    }
+
     private void HandleButtons()
     {
+        
+
         var mainMenuButton = GameObject.Find("MainMenuButton").GetComponent<Button>();
         if (mainMenuButton == null) return;
         if (enableMainMenuButton)
@@ -42,6 +52,7 @@ public class SettingsMenuController : USceneController
         else
         {
             mainMenuButton.gameObject.SetActive(false);
-        }   
+        }
+       
     }
 }

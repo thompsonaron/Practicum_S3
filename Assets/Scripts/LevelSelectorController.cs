@@ -7,15 +7,23 @@ public class LevelSelectorController : USceneController
     public LevelSelectorController() : base(SceneNames.LevelSelector) { }
     public UnlockedLevelsScriptableObject lockedLevels;
 
+    private int value = 0;
+
     public override void SceneDidLoad()
     {
         lockedLevels = Resources.Load<UnlockedLevelsScriptableObject>("UnlockedLevels");
         HandleButtons();
+        SetupLabels();
     }
 
     public override void SceneWillAppear()
     {
         var obj = GameObject.Find("StartMenu");
+    }
+
+    private void SetupLabels()
+    {
+       
     }
 
     private void HandleButtons()

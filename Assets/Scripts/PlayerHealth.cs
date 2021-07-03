@@ -15,6 +15,7 @@ public class PlayerHealth : Health
         if (currentHealth <= 0f && alive)
         {
             alive = false;
+            // TODO Action call main menu or level reload or something
             OnPlayerDeath?.Invoke();
         }
     }

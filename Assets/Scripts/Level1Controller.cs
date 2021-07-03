@@ -15,6 +15,8 @@ public class Level1Controller : USceneController
 
     public override void SceneDidLoad()
     {
+        HandleButtons();
+        SetupLabels();
         lockedLevels = Resources.Load<UnlockedLevelsScriptableObject>("UnlockedLevels");
         InputManager.OnPressedEsc += InputManager_OnPressedEsc;
         SpawnerController.OnEnemiesSet += SpawnerController_OnEnemiesSet;
@@ -33,11 +35,17 @@ public class Level1Controller : USceneController
         AssetProvider.ReturnAllToPool();
     }
 
+    private void ActivateInGameLevelSelector()
+    {
+
+    }
+
     private void EnemyHealth_OnDeath()
     {
         enemiesLeft--;
         if (enemiesLeft <= 0)
         {
+            // TODO load end level scene and unlock the next scene if there is such
             UnlockLevel(GetNextGameScene(SceneName));
             var endOfRoundController = new EndOfRoundController();
             endOfRoundController.playerWon = true;
@@ -61,6 +69,7 @@ public class Level1Controller : USceneController
             settingsOpen = false;
         }
 
+        //if (!settingsOpen && !levelComplete)
         if (!levelComplete && !settingsOpen)
         {
             settingsMenu.EnableMainMenuButton();
@@ -80,6 +89,17 @@ public class Level1Controller : USceneController
     public override void SceneWillAppear()
     {
         var obj = GameObject.Find("Level1");
+    }
+
+    private void SetupLabels()
+    {
+
+    }
+
+    private void HandleButtons()
+    {
+
+
     }
 
     public string GetCurrentGameScene(GameScene gameScene)
@@ -112,6 +132,8 @@ public class Level1Controller : USceneController
         }
     }
 
+    // TODO - needs automatization?
+    // WARNING - final level should somehow block the next button too
     public string GetNextGameScene(string gameSceneName)
     {
         switch (gameSceneName)

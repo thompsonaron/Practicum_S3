@@ -1,5 +1,15 @@
 ﻿public struct SceneNames
 {
+    public static string MainMenu = "MainMenu";
+    public static string Town = "Town";
+    public static string InGameMenu = "InGameMenu";
+    public static string Dungeon = "Dungeon";
+
+    //test
+    public static string ParticleTest = "ParticleTestScene";
+    public static string SaveLoadTest = "SaveLoadScene";
+    public static string LocalizationTest = "LocalizationTest";
+
     public static string StartMenu = "StartMenu";
     public static string LevelSelector = "LevelSelector";
     public static string Level1= "Level1";
@@ -18,3 +28,5 @@ public enum GameScene
     Level2,
     Level3
 }
+
+

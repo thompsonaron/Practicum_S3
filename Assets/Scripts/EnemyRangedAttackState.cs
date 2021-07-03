@@ -33,4 +33,10 @@ public class EnemyRangedAttackState : StateMachineBehaviour
         var bullet = AssetProvider.GetAsset(enemyAIController.rangedAsset);
         bullet.GetComponent<BulletController>().Activate(animator.transform, 10f, Target.Player, 1f);
     }
+
+    // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
+    override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    {
+
+    }
 }

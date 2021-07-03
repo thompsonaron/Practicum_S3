@@ -36,7 +36,7 @@ EditorBuildSettings:
     path: Assets/Scenes/LevelSelector.unity
     guid: 5cfaab45b9e5748428921860dc0d377a
   - enabled: 1
-    path: Assets/Scenes/LevelS/Level1.unity
+    path: Assets/Scenes/Level1.unity
     guid: 83651ab555560c44abfc75ca383e10e7
   - enabled: 1
     path: Assets/Scenes/Settings.unity
@@ -45,7 +45,7 @@ EditorBuildSettings:
     path: Assets/Scenes/EndOfRoundSelector.unity
     guid: 49f3f301a9bac164f97d18eb4b8abc74
   - enabled: 1
-    path: Assets/Scenes/LevelS/Level2.unity
+    path: Assets/Scenes/Level2.unity
     guid: 4d7a509289ac06843a45728b8a583a21
   - enabled: 1
     path: Assets/Game/TestGame/1S.unity

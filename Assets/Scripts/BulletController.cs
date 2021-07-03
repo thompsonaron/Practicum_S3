@@ -8,6 +8,7 @@ public class BulletController : MonoBehaviour
     private Vector3 originPosition;
     private string targetToDamage;
     private float damage;
+    private string target;
     public BulletType bulletType = BulletType.Regular;
     public float freezeBulletTime = 0.5f;
 
@@ -66,6 +67,7 @@ public class BulletController : MonoBehaviour
     {
         Regular, Freeze
     }
+
 }
 
 public struct Target

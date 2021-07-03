@@ -15,12 +15,16 @@ public class EntryPointController : MonoBehaviour
             Debug.unityLogger.logEnabled = false;
 #endif
 
+        //preloading of music and sound
+        //common assets
 
         //setup singletons
         AssetProvider.Prewarm();
         InputManager.Activate();
         
+
         var StartMenuController = new StartMenuController();
         UNavigationController.SetRootViewController(StartMenuController);
     }
 }
+

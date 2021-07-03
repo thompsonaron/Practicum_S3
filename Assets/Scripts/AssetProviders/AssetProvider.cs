@@ -53,6 +53,7 @@ public class AssetProvider : AssetBaseProvider
             _instance.poolObject.name = "Pool";
             GameObject.DontDestroyOnLoad(_instance.poolObject);
 
+            //bullet pool
             Instance.InstatiatePool(_instance.bullet, _instance.bulletPoolSize);
             Instance.InstatiatePool(_instance.fireBullet, _instance.bulletPoolSize);
             Instance.InstatiatePool(_instance.frozenOrb, _instance.bulletPoolSize);
@@ -62,6 +63,8 @@ public class AssetProvider : AssetBaseProvider
             Instance.InstatiatePool(_instance.enemy3, _instance.defaultPoolSize);
             Instance.InstatiatePool(_instance.enemy4, _instance.defaultPoolSize);
             Instance.InstatiatePool(_instance.enemy5, _instance.defaultPoolSize);
+
+            //load save
         }
     }
 
@@ -124,3 +127,4 @@ public enum GameAsset
     Mage, 
     Box
 }
+

@@ -14,6 +14,8 @@ public class SpawnerController : MonoBehaviour
 
     public static event Action<int> OnEnemiesSet;
 
+    private int spawnerCounter = 0;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -93,6 +95,24 @@ public class SpawnerController : MonoBehaviour
             enemy.transform.position = spawnPosition2;
         }
     }
+
+    //private void Spawn()
+    //{
+    //    //spawn...
+    //    var randomEnemyType = HelperFunctions.RandomEnumElement<EnemyType>();
+
+    //    var enemy = EnemyProvider.GetEnemy(EnemyType.MeleeWeak).GetComponent<EnemyAIController>();
+    //    //var enemy = EnemyProvider.GetEnemy(randomEnemyType).GetComponent<EnemyController>();
+    //    //enemy.Activate(transform.position, target.transform);
+
+    //    //keep spawning...
+    //    ticket = DelayedExecutionManager.ExecuteActionAfterDelay(3000, () =>
+    //    {
+    //        Spawn();
+    //    });
+
+
+    //}
 
     private void OnDisable()
     {

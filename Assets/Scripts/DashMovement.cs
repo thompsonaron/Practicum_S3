@@ -21,6 +21,7 @@ public class DashMovement : MonoBehaviour
     private bool canMove = true;
     private float timeUntilMove = 0f;
 
+    // Start is called before the first frame update
     void Start()
     {
         camera = Camera.main;
@@ -61,6 +62,7 @@ public class DashMovement : MonoBehaviour
         this.moveDirection = moveDirection;
     }
 
+    // Update is called once per frame
     void Update()
     {
         if (!canMove)
@@ -75,11 +77,14 @@ public class DashMovement : MonoBehaviour
         HandleRotion();
     }
 
+
+    //Private methods
     private void HandleRotion()
     {
         if (!canMove)
             return;
 
+        //early return
         if (lastMousePosition.Equals(Input.mousePosition))
         {
             return;

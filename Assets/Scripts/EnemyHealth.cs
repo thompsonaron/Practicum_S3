@@ -9,9 +9,9 @@ public class EnemyHealth : Health
     public override void TakeDamage(float damage)
     {
         currentHealth -= damage;
-        //GetComponent<Animator>().SetFloat("Health", currentHealth);
         if (currentHealth <= 0f)
         {
+            // TODO animation and toss back into the pool
             OnEnemyDeath?.Invoke();
             gameObject.GetComponent<PoolableObject>().ReturnToPool();
         }
@@ -19,6 +19,5 @@ public class EnemyHealth : Health
     private void OnEnable()
     {
         currentHealth = totalHealth;
-        //GetComponent<Animator>().SetFloat("Health", currentHealth);
     }
 }

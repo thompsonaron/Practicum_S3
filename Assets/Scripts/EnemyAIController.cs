@@ -27,6 +27,11 @@ public class EnemyAIController : MonoBehaviour
         navMeshAgent.SetDestination(playerTargetPos.position);
     }
 
+    //public void OnEnable()
+    //{
+    //    SetupEnemyAI();
+    //}
+
     private void Update()
     {
         if (playerTargetPos == null)

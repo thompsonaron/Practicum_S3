@@ -7,6 +7,7 @@ public class StartMenuController : USceneController
 {
     public StartMenuController() : base(SceneNames.StartMenu) { }
     private Text levelSelectorLabel;
+    private int value = 0;
 
     public override void SceneDidLoad()
     {
@@ -14,18 +15,22 @@ public class StartMenuController : USceneController
         SetupLabels();
     }
 
-    //public override void SceneWillAppear()
-    //{
-    //    var obj = GameObject.Find("StartMenu");
-    //}
+    public override void SceneWillAppear()
+    {
+        var obj = GameObject.Find("StartMenu");
+    }
 
     private void SetupLabels()
     {
         levelSelectorLabel = GameObject.Find("LevelSelectorLabel").GetComponent<Text>();
 
+        //guard
         if (levelSelectorLabel == null) return;
+        //levelSelectorLabel.text = value.ToString();
         levelSelectorLabel.text = "Level Selector";
     }
+
+
 
     private void HandleButtons()
     {
@@ -54,5 +59,30 @@ public class StartMenuController : USceneController
         {
             Application.Quit();
         });
+
+        //guard
+        //if (newGameButton == null) return;
+
+        //newGameButton.onClick.AddListener(() =>
+        //{
+        //    //Debug.Log("Click on a button");
+        //    var townVC = new TownController();
+
+        //    townVC.SetValue(value);
+
+        //    PushSceneController(townVC);
+        //});
+
+        //var addButton = GameObject.Find("AddButton").GetComponent<Button>();
+
+        ////guard
+        //if (addButton == null) return;
+
+        //addButton.onClick.AddListener(() =>
+        //{
+        //    value++;
+        //    valueLabel.text = value.ToString();
+        //});
+
     }
 }
