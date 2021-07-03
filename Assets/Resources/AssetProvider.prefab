@@ -1,0 +1,58 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8370212201122743395
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1958150525453365644}
+  - component: {fileID: 378906145367934262}
+  m_Layer: 0
+  m_Name: AssetProvider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1958150525453365644
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8370212201122743395}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1, z: -10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &378906145367934262
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8370212201122743395}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a16ac163347844e4dae54eb0aac7ae72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletPoolSize: 3
+  bullet: {fileID: 2797203178077211119, guid: e059a216037c644f8be42061631676ff, type: 3}
+  fireBullet: {fileID: 2797203178077211119, guid: c2b4a90b292940e48b642505da42a22e,
+    type: 3}
+  frozenOrb: {fileID: 2797203178077211119, guid: 3c8eb40129360994e98b76164da20bda,
+    type: 3}
+  defaultPoolSize: 10
+  enemy1: {fileID: 8552950774575834596, guid: 765c025c6a13c05409b39f630356eafb, type: 3}
+  enemy2: {fileID: 8504431881961006360, guid: 9edcd1566365de6428a04b86528b01c5, type: 3}
+  enemy3: {fileID: 6800908901588815147, guid: 67bc4c6a16861664b97bcd1f29a807fd, type: 3}
+  enemy4: {fileID: 1249535782497828381, guid: 01a3c33c04a32c648966ddb79f0630d9, type: 3}
+  enemy5: {fileID: 7928942397055514861, guid: e6173e36cac4001478596a0c3ef1b22f, type: 3}
+  box: {fileID: 2212296354735665300, guid: bdf9f981ab88d42f9b94a6c69f1fc39e, type: 3}
