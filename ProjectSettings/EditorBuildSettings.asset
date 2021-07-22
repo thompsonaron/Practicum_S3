@@ -32,4 +32,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/EndOfRoundSelector.unity
     guid: 49f3f301a9bac164f97d18eb4b8abc74
+  - enabled: 1
+    path: Assets/Scenes/IntroSene.unity
+    guid: 8609ac03ecf56eb4984ae19fc0db8403
   m_configObjects: {}

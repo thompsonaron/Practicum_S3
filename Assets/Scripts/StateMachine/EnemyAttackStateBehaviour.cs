@@ -24,6 +24,10 @@ public class EnemyAttackStateBehaviour : StateMachineBehaviour
         {
             enemyAIController.playerHealthReference.TakeDamage(enemyAIController.meleeDamage);
             attackTime = attackSpeed;
+            if (enemyAIController.isFatguy == true)
+            {
+                enemyAIController.effOnGround.Play();
+            }
         }
     }
 

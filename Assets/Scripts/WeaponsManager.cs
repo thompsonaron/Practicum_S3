@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
+using System;
 
 public class WeaponsManager : MonoBehaviour
 {
@@ -8,13 +10,23 @@ public class WeaponsManager : MonoBehaviour
     public Weapon currentWeapon;
     public int test;
 
+    public AudioManager audioManager;
+
     private void Start()
     {
+        audioManager = FindObjectOfType<AudioManager>();
+
         if (weapons.Length > 0)
         {
             currentWeapon = weapons[0];
         }
     }
+    public void StopWeaponFire()
+    {
+        currentWeapon.StopWeaponFire();
+    }
+
+
 
     public void EquipWeapon(WeaponType weaponType)
     {
@@ -32,5 +44,8 @@ public class WeaponsManager : MonoBehaviour
     public void FireWeapon()
     {
         currentWeapon.FireWeapon();
+
+       
+
     }
 }

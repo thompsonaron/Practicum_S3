@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.VFX;
 
 public class EnemyAIController : MonoBehaviour
 {
@@ -12,6 +13,8 @@ public class EnemyAIController : MonoBehaviour
     public PlayerController playerReference;
     public PlayerHealth playerHealthReference;
     public float meleeDamage = 0.5f;
+    public bool isFatguy;
+    public VisualEffect effOnGround;
 
     public void Start()
     {
@@ -27,10 +30,7 @@ public class EnemyAIController : MonoBehaviour
         navMeshAgent.SetDestination(playerTargetPos.position);
     }
 
-    //public void OnEnable()
-    //{
-    //    SetupEnemyAI();
-    //}
+  
 
     private void Update()
     {

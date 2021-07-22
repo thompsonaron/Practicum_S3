@@ -8,9 +8,14 @@ public class InputManager : MonoBehaviour
     public static event Action<Vector3> OnMovement;
     public static event Action OnPressedSpace;
     public static event Action<int> OnPressedNumber;
+    public static event Action OnStoppedFire;
 
     private void Update()
     {
+        if (Input.GetMouseButtonUp(0))
+        {
+            OnStoppedFire?.Invoke();
+        }
         //fire
         if (Input.GetMouseButton(0))
         {
@@ -31,6 +36,8 @@ public class InputManager : MonoBehaviour
         var inputY = Input.GetAxis(InputStrings.axixY);
 
         OnMovement?.Invoke(new Vector3(inputX, 0, inputY).normalized);
+        // OVO SE SIGURNO MOUE BOLJE NAPISATI --------------------------------------------
+
     }
 
     private static void ScanKeyboard()

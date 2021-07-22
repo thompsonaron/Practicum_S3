@@ -28,6 +28,7 @@ public class LevelSelectorController : USceneController
 
     private void HandleButtons()
     {
+        //var level1Button = GameObject.Find("IntroSene").GetComponent<Button>();
         var level1Button = GameObject.Find("Level1Button").GetComponent<Button>();
         var level2Button = GameObject.Find("Level2Button").GetComponent<Button>();
         var level3Button = GameObject.Find("Level3Button").GetComponent<Button>();
@@ -38,9 +39,9 @@ public class LevelSelectorController : USceneController
 
         level1Button.onClick.AddListener(() =>
         {
-            var level1Controller = new Level1Controller();
-            level1Controller.SceneName = SceneNames.Level1;
-            UNavigationController.SetRootViewController(level1Controller);
+            var introController = new IntroSceneController();
+            introController.SceneName = SceneNames.IntroController;
+            UNavigationController.SetRootViewController(introController);
         });
         level2Button.onClick.AddListener(() =>
         {

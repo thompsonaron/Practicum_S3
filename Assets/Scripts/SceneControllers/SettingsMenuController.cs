@@ -51,7 +51,7 @@ public class SettingsMenuController : USceneController
         }
         else
         {
-            mainMenuButton.gameObject.SetActive(false);
+            mainMenuButton.gameObject.SetActive(true);//--------
         }
        
     }

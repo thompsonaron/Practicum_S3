@@ -50,9 +50,9 @@ MonoBehaviour:
   frozenOrb: {fileID: 2797203178077211119, guid: 3c8eb40129360994e98b76164da20bda,
     type: 3}
   defaultPoolSize: 10
-  enemy1: {fileID: 8552950774575834596, guid: 765c025c6a13c05409b39f630356eafb, type: 3}
-  enemy2: {fileID: 8504431881961006360, guid: 9edcd1566365de6428a04b86528b01c5, type: 3}
+  enemy1: {fileID: 1249535782497828381, guid: 01a3c33c04a32c648966ddb79f0630d9, type: 3}
+  enemy2: {fileID: 8552950774575834596, guid: 765c025c6a13c05409b39f630356eafb, type: 3}
   enemy3: {fileID: 6800908901588815147, guid: 67bc4c6a16861664b97bcd1f29a807fd, type: 3}
   enemy4: {fileID: 1249535782497828381, guid: 01a3c33c04a32c648966ddb79f0630d9, type: 3}
-  enemy5: {fileID: 7928942397055514861, guid: e6173e36cac4001478596a0c3ef1b22f, type: 3}
+  enemy5: {fileID: 6800908901588815147, guid: 67bc4c6a16861664b97bcd1f29a807fd, type: 3}
   box: {fileID: 2212296354735665300, guid: bdf9f981ab88d42f9b94a6c69f1fc39e, type: 3}

@@ -95,13 +95,13 @@ AnimatorController:
     m_DefaultFloat: 0
     m_DefaultInt: 1
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: Distance
     m_Type: 1
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
@@ -203,6 +203,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c16a580d96c2fd4db4eaeffc2e3998f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyAIController: {fileID: 0}
 --- !u!1107 &6136408060487352048
 AnimatorStateMachine:
   serializedVersion: 5
@@ -217,7 +218,7 @@ AnimatorStateMachine:
     m_Position: {x: 30, y: 210, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 3586522724239676488}
-    m_Position: {x: 280, y: 20, z: 0}
+    m_Position: {x: 300, y: 20, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -2949039933106114114}
     m_Position: {x: 30, y: 310, z: 0}

@@ -65,8 +65,6 @@ public class DashMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!canMove)
-            return;
 
         timeUntilMove -= Time.deltaTime;
         if (timeUntilMove <= 0f)
@@ -74,8 +72,11 @@ public class DashMovement : MonoBehaviour
             canMove = true;
         }
 
+        if (!canMove)
+            return;
         HandleRotion();
     }
+
 
 
     //Private methods

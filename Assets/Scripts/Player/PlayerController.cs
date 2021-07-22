@@ -6,6 +6,7 @@ public class PlayerController : MonoBehaviour
 {
     public WeaponsManager weaponsManager;
     public DashMovement dashMovement;
+    public ParticleSystem dashParticle;
 
     // Start is called before the first frame update
     void Start()
@@ -16,6 +17,7 @@ public class PlayerController : MonoBehaviour
         InputManager.OnMovement += RegisterMove;
         InputManager.OnPressedSpace += OnPressedSpace;
         InputManager.OnPressedNumber += OnPressedNumber;
+        InputManager.OnStoppedFire += InputManager_OnStoppedFire;
     }
 
     private void OnPressedNumber(int number)
@@ -39,6 +41,7 @@ public class PlayerController : MonoBehaviour
     private void OnPressedSpace()
     {
         dashMovement.Dash();
+        dashParticle.Play();
     }
 
     private void RegisterShooting()
@@ -49,6 +52,11 @@ public class PlayerController : MonoBehaviour
     private void RegisterMove(Vector3 direction)
     {
         dashMovement.SetDirection(direction);
+    }
+
+    private void InputManager_OnStoppedFire()
+    {
+        weaponsManager.StopWeaponFire();
     }
 
     void OnDestroy()
